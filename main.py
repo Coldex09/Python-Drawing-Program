@@ -241,7 +241,7 @@ def initalize(cols, rows, showGrid=False):
 #-----------------------------------------------------------------------#
     #TKINTER FORM FOR GETTING INPUT#
 window = Tk()
-window.title('Paint Program')
+window.title('Paint')
 
 t_var = StringVar()
 t_var.trace('w', updateLabel)
@@ -287,7 +287,7 @@ while run:
             window.withdraw()
             #Ask the user if they want to save before closing
             if pygame.display.get_caption()[0].count('*') > 0: 
-               if messagebox.askyesno("Save Work?", "Would you like to save before closing?"):
+               if messagebox.askyesno("Save?", "Would you like to save before closing?"):
                   # If they have already saved the file simply save to that path otherwise they need to chose a location
                   if savedPath != "":
                      save(cols, rows, grid.showGrid, grid.getGrid(),savedPath)
